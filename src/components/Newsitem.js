@@ -8,12 +8,12 @@ export class Newsitem extends Component {
         
 
         <div className="card" style={{width: "20rem"}}>
-          <img src={imageUrl} className="card-img-top" alt="..." />
+          <img src={!imageUrl?"https://fdn.gsmarena.com/imgroot/news/21/08/xiaomi-smart-home-india-annoucnements/-476x249w4/gsmarena_00.jpg":imageUrl} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{title.slice(0,50)}...</h5>
-            <p className="card-text">{description.slice(0,65)}...
+            <p className="card-text">{!description ? title.slice(0,50) : description.slice(0,65)}...
             </p>
-            <a href={newsUrl} target="_blank" className="btn btn-sm btn-primary">
+            <a rel="noreferrer" href={newsUrl} target="_blank" className="btn btn-sm btn-primary">
               Read More
             </a>
           </div>
