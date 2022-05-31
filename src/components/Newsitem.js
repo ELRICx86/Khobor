@@ -13,7 +13,7 @@ export class Newsitem extends Component {
             <h5 className="card-title">{title.slice(0,50)}...</h5>
             <p className="card-text">{!description ? title.slice(0,50) : description.slice(0,65)}...
             </p>
-            <a rel="noreferrer" href={newsUrl} target="_blank" className="btn btn-sm btn-primary">
+            <a rel="noreferrer" href={newsUrl} target="_blank" className="btn btn-sm btn-danger">
               Read More
             </a>
           </div>
